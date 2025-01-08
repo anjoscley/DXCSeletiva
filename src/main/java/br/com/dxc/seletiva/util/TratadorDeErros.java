@@ -23,7 +23,7 @@ public class TratadorDeErros {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity tratar400(MethodArgumentNotValidException e) {
         List<FieldError> erros = e.getFieldErrors();
-        List<CampoInvalidoDTO> camposInvalidos = erros.stream().map(CampoInvalidoDTO::new)
+        List<CampoInvalido> camposInvalidos = erros.stream().map(CampoInvalido::new)
         													   .collect(Collectors.toList());
 
         return ResponseEntity.badRequest().body(camposInvalidos);

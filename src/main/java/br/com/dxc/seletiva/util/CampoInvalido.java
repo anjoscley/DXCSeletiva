@@ -2,17 +2,17 @@ package br.com.dxc.seletiva.util;
 
 import org.springframework.validation.FieldError;
 
-public class CampoInvalidoDTO{
+public class CampoInvalido{
 	
 	private String campo; 
 	private String mensagem;
 	
-	public CampoInvalidoDTO(String campo, String mensagem) {
+	public CampoInvalido(String campo, String mensagem) {
 		this.campo = campo;
 		this.mensagem = mensagem;
 	}
 	
-    public CampoInvalidoDTO(FieldError erro) {
+    public CampoInvalido(FieldError erro) {
         this(erro.getField(), erro.getDefaultMessage());
     }
 
