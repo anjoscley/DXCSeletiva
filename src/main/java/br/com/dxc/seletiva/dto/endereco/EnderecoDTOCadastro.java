@@ -17,7 +17,19 @@ public class EnderecoDTOCadastro{
         private String uf;
         private Integer numero;
         private String complemento;
-        
+
+		public EnderecoDTOCadastro(String logradouro, String bairro, String cep, String cidade, 
+				String uf, Integer numero, String complemento) {
+			super();
+			this.logradouro = logradouro;
+			this.bairro = bairro;
+			this.cep = cep;
+			this.cidade = cidade;
+			this.uf = uf;
+			this.numero = numero;
+			this.complemento = complemento;
+		}
+		
 		public String getLogradouro() {
 			return logradouro;
 		}

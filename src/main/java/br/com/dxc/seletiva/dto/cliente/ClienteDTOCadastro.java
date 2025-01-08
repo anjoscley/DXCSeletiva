@@ -17,7 +17,15 @@ public class ClienteDTOCadastro{
         private String telefone;
         @NotNull @Valid
         private EnderecoDTOCadastro endereco;
-        
+    
+		public ClienteDTOCadastro(String nome, String email, String telefone, EnderecoDTOCadastro endereco) {
+			super();
+			this.nome = nome;
+			this.email = email;
+			this.telefone = telefone;
+			this.endereco = endereco;
+		}
+		
 		public String getNome() {
 			return nome;
 		}
