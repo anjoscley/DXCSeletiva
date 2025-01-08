@@ -1,4 +1,4 @@
-package br.com.dxc.seletiva.util;
+package br.com.dxc.seletiva.exception;
 
 
 import java.util.List;
