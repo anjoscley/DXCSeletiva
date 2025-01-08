@@ -48,12 +48,13 @@ public class ClienteController {
         return ResponseEntity.created(uri).body(new ClienteDTODetalhe(cliente));
     }
 
-    @GetMapping
-    public ResponseEntity<Page<ClienteDTOListagem>> listar(@PageableDefault(sort = {"nome"}) Pageable pageable) {
-        Page<ClienteDTOListagem> page = repository.findByStatusTrue(pageable);
-
-        return ResponseEntity.ok(page);
-    }
+	
+	@GetMapping public ResponseEntity<Page<ClienteDTOListagem>> listar(@PageableDefault(sort = {"nome"}) Pageable pageable) {
+	  
+		Page<ClienteDTOListagem> page = repository.findByStatusTrue(pageable);
+	  
+		return ResponseEntity.ok(page); 
+	}
 
     @GetMapping("/{id}")
     public ResponseEntity<ClienteDTODetalhe> detalhar(@PathVariable Long id) {
@@ -74,7 +75,7 @@ public class ClienteController {
     @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity excluir(@PathVariable Long id) {
-        repository.getReferenceById(id).inativar();
+    	repository.deleteById(id);
 
         return ResponseEntity.noContent().build();
     }

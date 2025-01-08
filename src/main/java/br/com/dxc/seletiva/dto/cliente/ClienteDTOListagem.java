@@ -8,7 +8,14 @@ public class ClienteDTOListagem{
     private String nome;
     private String email;
 
-    public ClienteDTOListagem(Cliente cliente) {
+    public ClienteDTOListagem(Long id, String nome, String email) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.email = email;
+	}
+
+	public ClienteDTOListagem(Cliente cliente) {
         id = cliente.getId();
         nome = cliente.getNome();
         email = cliente.getEmail();

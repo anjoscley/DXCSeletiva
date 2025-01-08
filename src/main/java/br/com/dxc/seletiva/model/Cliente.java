@@ -11,7 +11,7 @@ import br.com.dxc.seletiva.dto.cliente.ClienteDTOAtualizacao;
 import br.com.dxc.seletiva.dto.cliente.ClienteDTOCadastro;
 
 @Table(name = "cliente")
-@Entity(name = "Cliente")
+@Entity
 public class Cliente {
 
     @Id
