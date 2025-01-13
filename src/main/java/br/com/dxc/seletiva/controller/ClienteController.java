@@ -58,7 +58,7 @@ public class ClienteController {
 	}
 	
 	@GetMapping("buscarPorEndereco") 
-	public ResponseEntity<List<ClienteDTOListagem>> buscarPorEndereco(String logradouro) {
+	public ResponseEntity<List<ClienteDTOListagem>> buscarPorEndereco(@RequestParam String logradouro) {
 		return ResponseEntity.ok(service.buscarPorEndereco(logradouro)); 
 	}
 	
