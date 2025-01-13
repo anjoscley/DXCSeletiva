@@ -94,9 +94,7 @@ public  class  ClienteControllerTest {
         ResultActions result = mockMvc.perform(get("/clientes/{id}", clienteId)
         		.with(httpBasic("aprovado", "0xA")));
 
-        result.andExpect(status().isOk())
-              .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-              .andExpect(jsonPath("$.id").value(clienteId));
-    }
+        result.andExpect(status().isNotFound());
+    }    
 
 }

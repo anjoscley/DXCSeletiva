@@ -41,5 +41,12 @@ public class ClienteDTOAtualizacao{
 		public void setEndereco(EnderecoDTOAtualizacao endereco) {
 			this.endereco = endereco;
 		}
+		public ClienteDTOAtualizacao(Long id, String nome, String telefone, EnderecoDTOAtualizacao endereco) {
+			super();
+			this.id = id;
+			this.nome = nome;
+			this.telefone = telefone;
+			this.endereco = endereco;
+		}
      
 }
