@@ -25,7 +25,8 @@ public class SeletivaSecurityConfig {
 	
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception{
-		httpSecurity.authorizeHttpRequests( (authz) -> authz 
+		
+		httpSecurity.csrf().disable().authorizeHttpRequests( (authz) -> authz 
 				.antMatchers("/clientes")
 				.authenticated()).httpBasic();
 		

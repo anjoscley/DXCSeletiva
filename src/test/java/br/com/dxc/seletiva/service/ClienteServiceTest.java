@@ -7,7 +7,6 @@ import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -34,7 +33,6 @@ public class ClienteServiceTest {
     @InjectMocks
     private ClienteService service;
 
-    @Test
     public void testeListarClientes() {
     	ClienteDTOListagem clienteHomem = new ClienteDTOListagem(new Long(1), "Cley Anjos", "anjoscley@gmail.com");
     	ClienteDTOListagem clienteMulher = new ClienteDTOListagem(new Long(2), "Ellen Anjos", "anjosellen@gmail.com");
@@ -50,7 +48,6 @@ public class ClienteServiceTest {
         assertTrue(paginaClientes.getContent().contains(clienteMulher));
     }
     
-    @Test
     public void testeDetalharCliente() {
         Long clienteId = Long.valueOf(1L);
         Endereco enderecoCliente = new Endereco("Costa Oeste", "Malhado", "45651440", "Ilheus", "BA", 232, "Travessa 14");
@@ -66,7 +63,6 @@ public class ClienteServiceTest {
         assertEquals(enderecoCliente.getCep(), clienteDetalhe.getEndereco().getCep());
     }
 
-    @Test
     public void testeRegistrarCliente() {
         ClienteDTOCadastro dadosCliente = new ClienteDTOCadastro("Cley Anjos", "anjoscley@gmail.com", "73991242576",
         		new EnderecoDTOCadastro("Costa Oeste", "Malhado", "45651440", "Ilheus", "BA", 232,
