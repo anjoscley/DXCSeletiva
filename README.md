@@ -2,20 +2,20 @@
 
 Utilizando Spring Boot, JDK 11 e maven:
 
-Criar um MS que seja responsável por Criar, alterar, excluir e consultar Clientes.
+#Criar um MS que seja responsável por Criar, alterar, excluir e consultar Clientes.
 
 Utilizar:
 
-Banco de Dados H2 (memoria)
+#Banco de Dados H2 (memoria)
 
-Criar queries usando:
+#Criar queries usando:
 
-JDBCTemplate
+#JDBCTemplate
 
-JPA Repository
+#JPA Repository
 
-Consultas com queries Nativas
+#Consultas com queries Nativas
 
-Spring Security com basic authentication
+#Spring Security com basic authentication
 
-Implementar testes JUNIT
+#Implementar testes JUNIT
